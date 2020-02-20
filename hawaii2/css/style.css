@@ -1,0 +1,150 @@
+/*とりあえずここで使う文字全ての調整*/
+h1,
+h2,
+h3,
+p,
+a {
+    font-family: sans-serif;
+    margin: 5% 0%
+}
+
+body {
+    /*左右の余白*/
+    margin: 0 15%;
+
+    /*背景（これは勝手にしたので消してくれて大丈夫）*/
+    background-color: #f7f7f7
+}
+
+
+
+/*ここからヘッダー*/
+
+header {
+    /*    ../は、今このファイルがあるフォルダから出ると言う意味*/
+    /*    一回出て、imageに入って写真を指定している。*/
+    /*    ファイル、フォルダの階層に注意！*/
+    background-image: url("../image/honolulu.jpg");
+    background-position: bottom;
+    background-size: cover;
+
+    /*    vwを使うと画面の大きさ（正確には幅）によって数値が変わる*/
+    height: 25vw;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 10vw;
+    /*    文字を縦に中央寄席できる*/
+    line-height: 25vw;
+}
+
+/*白い背景（消してもいいよ）*/
+header h1 span {
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+
+
+
+
+/*ここからコンテンツ。グリッド使ってるよ*/
+
+/*今回は縦に2個、横に3個の計6マスを指定した*/
+.content-box {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    background-color: white;
+}
+
+
+/*ここから箱の中身*/
+/*今回は全ての箱にmargin5％かけてるよ*/
+
+/*左上2マス。縦に1個、横に2個分の箱*/
+.detail {
+    margin: 5%;
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.detail h1 {
+    font-size: 3vw
+}
+
+
+/*右上1マス。縦に1個、横に1個分の箱*/
+.map {
+    margin: 5%;
+    grid-row: 1;
+    grid-column: 3;
+}
+
+
+/*左下1マス*/
+.a {
+    grid-row: 2;
+    grid-column: 1;
+    background-image: url("../image/hawaii-3603379__480.jpg");
+}
+
+/*真ん中下1マス*/
+.b {
+    grid-row: 2;
+    grid-column: 2;
+    background-image: url("../image/%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%20(1).jpg");
+}
+
+/*右下1マス*/
+.c {
+    grid-row: 2;
+    grid-column: 3;
+    background-image: url("../image/%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%20(2).jpg");
+
+}
+
+
+
+/*下3マスにかかってる*/
+.content {
+    background-size: cover;
+    background-position: center;
+    margin: 5%;
+
+    /*    なんと padding-topで横幅（widths）から高さを取れます！*/
+    /*    ちなみに横幅は.content-boxで三等分にしてるから、そこから取れる。*/
+    /*    本来全く同じ大きさにするには100％だけど、今回はそれぞれのマスにmargin5％がかかっているから、実質マスの横幅は左右の5％それぞれを引いた90％になってます。*/
+    /*    だから同じ大きさにするために90％。まだここは分からなくても大丈夫ですｗ*/
+    padding-top: 90%;
+
+    /*    影をつけた*/
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
+
+    /*    中の文字を動かすためにいる*/
+    position: relative;
+}
+
+
+/*箱の中の文字を中央寄せ*/
+.content p {
+    /*    上のposition: relativeとセットで使う*/
+    position: absolute;
+    /*    縦の中央寄せ*/
+    top: 50%;
+    transform: translateY(-50%);
+    /*    横の中央寄せ*/
+    width: 100%;
+    text-align: center;
+
+    font-size: 4vw;
+}
+
+/*aタグはそのままだと色が青かったり架線がついていたりするから消してみた*/
+a {
+    text-decoration: none;
+    color: white
+}
