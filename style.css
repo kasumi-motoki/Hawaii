@@ -3,91 +3,110 @@
 
 
 
+body {
+    margin: 0 15%;
+}
 
 
+header {
+    position: relative;
+}
 
+header h1 {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 1300%;
+    font-family: sans-serif;
+    top: 54%;
+    left: 40%;
+    transform: translate(-50, -50);
+}
 
-
-body{margin:0 15%;}
-
-
-header{position:relative;}
-
-header h1{position:absolute;
-         color:white;
-         font-weight:bold;
-         font-size:1300%;
-         font-family:sans-serif;
-         top:54%;
-         left:40%;
-         transform:translate(-50,-50);}
-    
-.container{display:grid;
-             grid-template-columns:1fr 1fr 1fr;
-    　　　　  grid-template-rows:1fr 1fr;
-             height:3100px;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 3100px;
 }
 
 
 
-.item{padding-top:94%;}
+.item {
+    padding-top: 94%;
+}
 
 
 
-.itemA{grid-column:1/2;
-        grid-row:1/2;
-        margin:3%;
-        position: relative;}
+.itemA {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 3%;
+    position: relative;
+}
 
-.itemA h1{position:absolute;
-    font-size:200px;
-    margin:200px 0 0 0;}
+.itemA h1 {
+    position: absolute;
+    font-size: 200px;
+    margin: 200px 0 0 0;
+}
 
-.itemA p{position:absolute;
-        font-size:140px;
-    top:30%;
-    left:20%;}
-              
-.itemB{grid-column:2/4;
-     grid-row;1/2;
-     margin:3%;}
+.itemA p {
+    position: absolute;
+    font-size: 140px;
+    top: 30%;
+    left: 20%;
+}
 
-
-.itemC{grid-column:1/2;
-           grid-row:2/3;
-           margin:3%;
-           background-image:url("image/hawaii-3603379__480.jpg");
-           background-image:no-repeat;
-           background-size: cover;
-position: relative;}
-
-
-.itemD{grid-column:2/3;
-           grid-row:2/3;
-            margin:3%;
-            background-image:url("image/ダウンロード (1).jpg");
-            background-image:no-repeat;
-            background-size: cover;
-position: relative;}
+.itemB {
+    grid-column: 2/4;
+    grid-row;
+    1/2;
+    margin: 3%;
+}
 
 
-.itemE{grid-column:3/4;
-           grid-row:2/3;
-           margin:3%;
-           background-image:url("image/ダウンロード (2).jpg");
-           background-image:no-repeat;
-           background-size: cover;
-position: relative;}
+.itemC {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 3%;
+    background-image: url("image/hawaii-3603379__480.jpg");
+    background-image: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.itemD {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 3%;
+    background-image: url("image/ダウンロード (1).jpg");
+    background-image: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.itemE {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    margin: 3%;
+    background-image: url("image/ダウンロード (2).jpg");
+    background-image: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
 
 a {
     text-decoration: none;
     color: white;
-    font-size:2vw;
+    font-size: 2vw;
     position: absolute;
     transform: translateY(-50%);
-    top:50%;
-    left:24%;
-    font-size:4vw;
-    text-align: center;}
-
+    top: 50%;
+    left: 24%;
+    font-size: 4vw;
+    text-align: center;
+}
